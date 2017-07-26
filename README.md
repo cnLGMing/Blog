@@ -12,7 +12,7 @@
 
 
 
-<center><h3>cnLGMing</h3></center>
+<center><h3>关于我</h3></center>
 
 <br>
 
