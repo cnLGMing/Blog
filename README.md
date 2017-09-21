@@ -35,6 +35,6 @@
 <br>
 
 <center>
-![Atom](https://github.com/cnLGMing/AndroidDemo/blob/master/Atom.png?raw=true)
+    <img alt='Atom' src='https://github.com/cnLGMing/AndroidDemo/blob/master/Atom.png?raw=true'}/>
 </center>
 
