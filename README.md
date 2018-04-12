@@ -1,6 +1,10 @@
 # 关于博客
 
-> 纠结了很久, 还是觉得通过 GitHub 的 Issues 来写博客, 比较方便.
+###  [博客 传送门](https://github.com/cnLGMing/Blog/wiki)
+
+> 通过 GitHub 的 [wiki](https://github.com/cnLGMing/Blog/wiki) 来写博客
+>
+> 通过 GitHub 的 [Issues](https://github.com/cnLGMing/Blog/issues) 来实现评论功能
 
 主要记录以下几点:
 - 学习 [Java](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AJava) / [Android](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AAndroid) / [Kotlin](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AKotlin) / [Git](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AGit)  / [HTML](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AHTML) / [JavaScript](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AJavaScript) / [React](https://github.com/cnLGMing/Blog/issues?q=is%3Aopen+is%3Aissue+label%3AReact) 等相关知识.
