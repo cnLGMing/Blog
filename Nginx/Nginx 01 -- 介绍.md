@@ -8,3 +8,22 @@
 2. 负载均衡
 3. HTTP 服务器
 4. 正向代理 
+
+
+
+
+
+---
+
+---
+
+> **作者简介**：
+>
+> **刘广明**([@cnLGMing](http://weibo.com/u/1665380350))，一步一步往上爬。
+>
+> [个人博客](http://www.cnlgming.com/) 、[GitHub](https://github.com/cnLGMing) 、[知乎](https://www.zhihu.com/people/LGMing)、[邮箱](mailto: liuguangmingcn@163.com)
+>
+> **文章若有不对之处，欢迎指正，谢谢~**
+>
+> **版权声明：原创作品，转载时请务必注明原始出处。**
+

@@ -1,5 +1,3 @@
-[TOC]
-
 # 下载 & 安装 & 启动
 
 ## Windows 篇 *(Windows 10 x64)*
@@ -102,7 +100,7 @@
 
 ## macOS 篇
 
-1. 
+*待写*
 
 # 我遇到的问题
 
@@ -126,3 +124,20 @@
   - **解决方式：**
     - 使用 `nginx -s reload` 命令，即可重新加载配置文件
     - 使用 `systemctl nginx -s reload` 命令进行重新加载配置文件
+
+---
+
+---
+
+> **作者简介**：
+>
+> **刘广明**([@cnLGMing](http://weibo.com/u/1665380350))，一步一步往上爬。
+>
+> [个人博客](http://www.cnlgming.com/) 、[GitHub](https://github.com/cnLGMing) 、[知乎](https://www.zhihu.com/people/LGMing)、[邮箱](mailto: liuguangmingcn@163.com)
+>
+> **文章若有不对之处，欢迎指正，谢谢~**
+>
+> **版权声明：原创作品，转载时请务必注明原始出处。**
+
+
+
