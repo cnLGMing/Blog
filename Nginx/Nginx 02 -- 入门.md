@@ -108,13 +108,13 @@
 
 - **问题1：**在 Linux 中启动 Nginx 服务时，报错。错误信息如下：
 
-  > Redirecting to /bin/systemctl start  nginx.service
-  > Job for nginx.service failed because the control process exited with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
+    > Redirecting to /bin/systemctl start  nginx.service
+    > Job for nginx.service failed because the control process exited with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
 
-  - **原因：**通过 `netstat -tuplen` 查看端口号发现，`80 端口` 被占用，而恰恰 Nginx 默认使用的也是 `80 端口`。
-  - **解决方式：**
-    - 停止占用 `80 端口` 的服务，在确认该服务无关紧要之后，我直接 kill 了该服务进程。
-    - 当不能停止占用 `80 端口` 的服务时，只能修改 Nginx 的端口号了。
+    - **原因：**通过 `netstat -tuplen` 查看端口号发现，`80 端口` 被占用，而恰恰 Nginx 默认使用的也是 `80 端口`。
+    - **解决方式：**
+      - 停止占用 `80 端口` 的服务，在确认该服务无关紧要之后，我直接 kill 了该服务进程。
+      - 当不能停止占用 `80 端口` 的服务时，只能修改 Nginx 的端口号了。
 
 - **问题2：**在 Linux 中，修改 Nginx 的配置文件 `nginx.conf` 后，使用 `service nginx -s reload` 重新加载配置文件时，报如下错误：
 
@@ -124,20 +124,4 @@
   - **解决方式：**
     - 使用 `nginx -s reload` 命令，即可重新加载配置文件
     - 使用 `systemctl nginx -s reload` 命令进行重新加载配置文件
-
----
-
----
-
-> **作者简介**：
->
-> **刘广明**([@cnLGMing](http://weibo.com/u/1665380350))，一步一步往上爬。
->
-> [个人博客](http://www.cnlgming.com/) 、[GitHub](https://github.com/cnLGMing) 、[知乎](https://www.zhihu.com/people/LGMing)、[邮箱](mailto: liuguangmingcn@163.com)
->
-> **文章若有不对之处，欢迎指正，谢谢~**
->
-> **版权声明：原创作品，转载时请务必注明原始出处。**
-
-
 
