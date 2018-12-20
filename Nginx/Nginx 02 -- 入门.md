@@ -106,21 +106,21 @@
 
 > 以下问题及解决方式不一定同样适合你，务必根据实际 `Log` 进行解决错误。
 
-- **问题1：**在 Linux 中启动 Nginx 服务时，报错。错误信息如下：
+- **问题1：** 在 Linux 中启动 Nginx 服务时，报错。错误信息如下：
 
     > Redirecting to /bin/systemctl start  nginx.service
     > Job for nginx.service failed because the control process exited with error code. See "systemctl status nginx.service" and "journalctl -xe" for details.
 
-    - **原因：**通过 `netstat -tuplen` 查看端口号发现，`80 端口` 被占用，而恰恰 Nginx 默认使用的也是 `80 端口`。
+    - **原因：** 通过 `netstat -tuplen` 查看端口号发现，`80 端口` 被占用，而恰恰 Nginx 默认使用的也是 `80 端口`。
     - **解决方式：**
       - 停止占用 `80 端口` 的服务，在确认该服务无关紧要之后，我直接 kill 了该服务进程。
       - 当不能停止占用 `80 端口` 的服务时，只能修改 Nginx 的端口号了。
 
-- **问题2：**在 Linux 中，修改 Nginx 的配置文件 `nginx.conf` 后，使用 `service nginx -s reload` 重新加载配置文件时，报如下错误：
+- **问题2：** 在 Linux 中，修改 Nginx 的配置文件 `nginx.conf` 后，使用 `service nginx -s reload` 重新加载配置文件时，报如下错误：
 
   > The service command supports only basic LSB actions (start, stop, restart, try-restart, reload, force-reload, status). For other actions, please try to use systemctl.
 
-  - **原因：**CentOS 7.x 开始，CentOS 开始使用 `systemd` 服务来代替 `daemon`，原来管理系统启动和管理系统服务的相关命令全部由 `systemctl 命令` 来代替。`service 命令` 只保留下了极少部分使用，大部分命令都要改用 `systemctl` 使用。 
+  - **原因：** CentOS 7.x 开始，CentOS 开始使用 `systemd` 服务来代替 `daemon`，原来管理系统启动和管理系统服务的相关命令全部由 `systemctl 命令` 来代替。`service 命令` 只保留下了极少部分使用，大部分命令都要改用 `systemctl` 使用。 
   - **解决方式：**
     - 使用 `nginx -s reload` 命令，即可重新加载配置文件
     - 使用 `systemctl nginx -s reload` 命令进行重新加载配置文件
