@@ -125,3 +125,8 @@
     - 使用 `nginx -s reload` 命令，即可重新加载配置文件
     - 使用 `systemctl nginx -s reload` 命令进行重新加载配置文件
 
+---
+
+> **文章若有不对之处，欢迎在 `Issues` 指正，谢谢~**
+>
+> **邮箱：liuguangmingcn@163.com**
