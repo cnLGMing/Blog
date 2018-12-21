@@ -101,11 +101,11 @@
   ```
 
 
-## macOS 篇*(macOS Mojave 10.14)*
+## macOS 篇 *(macOS Mojave 10.14)*
 
 因我的 mbp 之前已经安装了 `Homebrew`，进行软件包管理，所以直接使用 `brew` 搜索并安装 `Nginx`。当然，你也可以下载源码自己编译打包安装。
 
-> [在 macOS 下安装 Homebrew](https://github.com/cnLGMing/Blog/blob/master/macOS/在 macOS 下安装 Homebrew.md)
+> [在 macOS 下安装 Homebrew](https://github.com/cnLGMing/Blog/blob/28cdc0966cf674758586c25795b1e6c0a173bed5/macOS/%E5%9C%A8%20macOS%20%E4%B8%8B%E5%AE%89%E8%A3%85%20Homebrew.md)
 
 1. 搜索
 
