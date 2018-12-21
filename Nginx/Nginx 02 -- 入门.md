@@ -18,7 +18,7 @@
    >start nginx
    ```
 
-5. 打开浏览器，输入 [localhost](http://localhost/) 回车，若返回以下界面，则表示 Nginx 服务启动成功。
+5. 打开浏览器，输入 [http://localhost](http://localhost/) 回车，若返回以下界面，则表示 Nginx 服务启动成功。
 
    ># Welcome to nginx!
    >
@@ -82,6 +82,9 @@
   > nginx: /usr/sbin/nginx /usr/lib64/nginx /etc/nginx /usr/share/nginx /usr/share/man/man8/nginx.8.gz
 
   以下是 `Nginx` 的默认路径： 
+
+  - 使用 `Homebrew` 安装的路径：`/usr/local/Cellar/nginx`
+
   - Nginx 配置路径：`/etc/nginx/`
   - PID 目录：`/var/run/nginx.pid`
   - 错误日志：`/var/log/nginx/error.log `
@@ -98,9 +101,59 @@
   ```
 
 
-## macOS 篇
+## macOS 篇*(macOS Mojave 10.14)*
 
-*待写*
+因我的 mbp 之前已经安装了 `Homebrew`，进行软件包管理，所以直接使用 `brew` 搜索并安装 `Nginx`。当然，你也可以下载源码自己编译打包安装。
+
+> [在 macOS 下安装 Homebrew](https://github.com/cnLGMing/Blog/blob/master/macOS/在 macOS 下安装 Homebrew.md)
+
+1. 搜索
+
+   ```bash
+   $ brew search nginx 
+   ```
+
+2. 在线安装
+
+   ```shell
+   $ brew install nginx
+   ```
+
+3. 启动
+
+   ```shell
+   $ nginx
+   ```
+
+4. 打开浏览器，输入 [http://localhost:8080](http://localhost:8080) 回车，若返回以下界面，则表示 Nginx 服务启动成功。
+
+   > # Welcome to nginx!
+   >
+   > If you see this page, the nginx web server is successfully installed and working. Further configuration is required.
+   >
+   > For online documentation and support please refer to [nginx.org](http://nginx.org/).
+   > Commercial support is available at [nginx.com](http://nginx.com/).
+   >
+   > *Thank you for using nginx.*
+
+**Tips：**
+
+- 在 Windows、Linux 中，Nginx 默认使用的是 `80 端口`，而在 macOS 中，其默认使用的是 `8080端口`。
+
+- Nginx 的默认路径：
+
+  - Nginx 配置路径：`/usr/local/etc/nginx `
+  - PID 目录：`/usr/local/var/run/nginx.pid`
+  - 错误日志：`/usr/local/var/log/nginx/error.log `
+  - 访问日志：`/usr/local/var/log/nginx/access.log `
+  - 默认站点目录：`/usr/local/var/www `
+  - Nginx 配置文件路径：`/usr/local/etc/nginx/nginx.conf` 
+
+- 为了方便修改 Nginx 的配置文件，可以[创建软链接](https://github.com/cnLGMing/Blog/blob/master/Linux/创建软链接.md)。
+
+  ```shell
+  $ ln -s /usr/local/etc/nginx ~/Develop/nginx-1.14.2
+  ```
 
 # 我遇到的问题
 
