@@ -1,12 +1,20 @@
-<center><h1>在 macOS 下安装 Homebrew</h1></center>
+# 在 macOS 下安装 Homebrew
 
-# 安装 Homebrew
+> Homebrew 安装程序的过程中需要用到 Xcode，所以请确保电脑已安装 Xcode。如果没有安装，可以到 App Store 中免费下载安装。 
+
+## 安装 Homebrew
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-# 常用命令
+## 卸载 Homebrew
+
+```shell
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+```
+
+## 常用命令
 
 ```shell
 # 搜索包
@@ -27,14 +35,17 @@ $ brew list
 # 查看brew的帮助
 $ brew –help
 
-# 更新 Homebrew
+# 更新所有软件(含 Homebrew)
 $ brew update
 
-# 检查软件是否有新版本
-$ brew outdated 软件名称
-
-# 升级软件
+# 更新软件
 $ brew upgrade 软件名称
+
+# 查看哪些软件可以更新
+$ brew outdated
+
+# 查看软件是否有新版本
+$ brew outdated 软件名称
 
 # 清理不需要的版本极其安装包缓存
 $ brew cleanup 软件名称
