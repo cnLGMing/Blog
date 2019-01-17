@@ -83,8 +83,6 @@
 
   以下是 `Nginx` 的默认路径： 
 
-  - 使用 `Homebrew` 安装的路径：`/usr/local/Cellar/nginx`
-
   - Nginx 配置路径：`/etc/nginx/`
   - PID 目录：`/var/run/nginx.pid`
   - 错误日志：`/var/log/nginx/error.log `
@@ -142,6 +140,7 @@
 
 - Nginx 的默认路径：
 
+  - 使用 `Homebrew` 安装的路径：`/usr/local/Cellar/nginx`
   - Nginx 配置路径：`/usr/local/etc/nginx `
   - PID 目录：`/usr/local/var/run/nginx.pid`
   - 错误日志：`/usr/local/var/log/nginx/error.log `
