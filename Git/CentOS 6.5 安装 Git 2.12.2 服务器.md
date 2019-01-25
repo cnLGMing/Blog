@@ -47,6 +47,25 @@
     ```shell
     [root@cnLGMing /root/git-2.12.2]# ./configure
     ```
+    - 若遇到以下报错信息：
+
+      ```shell
+      configure: Setting lib to 'lib' (the default)
+      configure: Will try -pthread then -lpthread to enable POSIX Threads.
+      configure: CHECKS for site configuration
+      checking for gcc... no
+      checking for cc... no
+      checking for cl.exe... no
+      configure: error: in `/root/git-2.12.2':
+      configure: error: no acceptable C compiler found in $PATH
+      See `config.log' for more details
+      ```
+
+      可通过安装 `gcc` 解决：
+
+      ```shell
+      [root@cnLGMing /root/git-2.12.2]# yum install gcc
+      ```
 
 7. 编译
 
@@ -55,10 +74,31 @@
    注: -j4 表示使用 4 个线程进行编译, 根据自己服务器而定. 编译后将会安装在 /usr/local/bin 下面
    ```
 
-   - 若遇到报错信息:  `cache.h:44: error: expected specifier-qualifier-list before ‘z_stream’`, 需要安装 **zlib**
+   - 若遇到以下报错信息：
+
+     1. `cache.h:40:18: fatal erroe: zlib.h: No such file or directory`
+
+        `#include <zlib.h>`
+
+     2. `cache.h:44: error: expected specifier-qualifier-list before ‘z_stream’`
+
+     均可通过安装 **zlib** 解决：
 
      ```shell
      [root@cnLGMing ~]# yum install zlib-devel
+     ```
+
+   - 若遇到以下报错信息：
+
+     ```shell
+     make[1]: *** [perl.mak] Error 2
+     make: *** [perl/perl.mak] Error 2
+     ```
+
+     可通过安装 `perl-ExtUtils-MakeMaker` 解决：
+
+     ```shell
+     [root@cnLGMing ~]# yum install perl-ExtUtils-MakeMaker package
      ```
 
 8. 添加系统关联
