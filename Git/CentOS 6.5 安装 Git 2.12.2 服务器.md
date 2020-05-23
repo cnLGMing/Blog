@@ -1,5 +1,7 @@
 [TOC]
 
+> 最后更新日期：2020-05-23
+
 # 前言
 
 一直想把公司项目从 SVN 迁到 Git , 无奈后端同事并没有兴趣, 只能先把自己的前端迁到 Git...第一次在开发环境下, 拥有 Root 权限进行所有操作, 毕竟 Linux 不是很好, 有点虚, 总担心会误操作, 那就真的是从删库到跑路了.....
@@ -161,6 +163,16 @@
 
       ```shell
       [root@cnLGMing /]# mkdir /home/git/.ssh
+      
+      ———————————————— 更新日期: 2020-05-23，开始 ————————————————
+      
+      此时需要注意 .ssh 文件夹的拥有者应该是 git 用户 和 git 用户组
+      例如: drwx------  2 git  git  4096 May 23 15:04 .ssh
+      
+      .ssh 文件夹内的文件也是一样属于 git 用户 和 git 用户组
+      例如: -rw------- 1 git git 575 May 23 14:59 authorized_keys
+      
+      ———————————————— 更新日期: 2020-05-23，结束 ————————————————
       ```
 
    - 将上一步生成的公钥追加到 `authorized_keys文件` 中
@@ -171,7 +183,7 @@
       # 创建一个 authorized_keys 文件
       [root@cnLGMing /home/git/.ssh]# vi authorized_keys
       # 将上一步生成的公钥追加到 authorized_keys 文件中
-      [root@cnLGMing /home/git/.ssh]# cat id_rsa.pub >> authorized_keys
+      [root@cnLGMing /home/git/.ssh]# cat id_rsa.pub >> 
       ```
 
 3. 设置权限
@@ -255,11 +267,24 @@
    RSAAuthentication yes
    PubkeyAuthentication yes
    AuthorizedKeysFile  .ssh/authorized_keys
+   
+   
+   ———————————————— 更新日期: 2020-05-23，开始 ————————————————
+   
+   CentOS7.5 中，RSAAuthentication 参数已被弃用！
+   # 编辑配置文件
+   [root@cnLGMing /]# vi /etc/ssh/sshd_config
+   PubkeyAuthentication yes（默认是被注释了的）
+   AuthorizedKeysFile  .ssh/authorized_keys（默认已有，没有的话，自行添加）
+   
+   ———————————————— 更新日期: 2020-05-23，结束 ————————————————
    ```
 
 
 
 CentOS 6.5 安装 Git 2.12.2 服务器 到这就结束了...
+
+> CentOS 7.5 安装 Git 2.26.2 服务器同样适用, 亲测
 
 看似很流畅, 其实我安装卸载重复了至少3次, 才确定无误的记录下来...
 
